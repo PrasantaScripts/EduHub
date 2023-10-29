@@ -19,7 +19,7 @@
             </div>
             <p class="side-big-heading">Welcome to NGO Login</p>
         </div>
-        <form action="" class="signup-form-container">
+        <form action="" class="signup-form-container" id="login-form">
             <p class="big-heading">Login to your account</p>
             <div class="social-media-platform">
 
@@ -38,5 +38,13 @@
         </form>
 </body>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        window.location.href = '../ngoDash/index.html';
+    });
+
+</script>
 
 </html>
