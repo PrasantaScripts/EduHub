@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Student</title>
+</head>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top"
+        style="background: linear-gradient(-20deg, #292828, #be5869);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="index.html">Student DashBoard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavBar">
+
+                <form class="d-flex ms-auto my-3 my-lg-0">
+                    <div class="input-group">
+
+                        <a href="../jobs/index.html" class="rounded px-3 mx-3"
+                            style="box-shadow: 1px 1px 10px 4px rgb(27, 25, 25);text-decoration: none; color: #FFFFFF; text-align: center; background-color: #be5869;">Jobs
+                            Available</a>
+                        <input class="form-control mx-3" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-2" href="../profile/index.html">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav " tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3">
+                            CORE
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./index.html" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                            <span>How to Use</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../announcements/index.html" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                            <span>AnnounceMents</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3 mb-3">
+                            Overview
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#Livelecutre" class=" text-white  nav-link px-3">
+                            <span class="me-2"><i class="bi bi-play-fill"></i></span>
+                            <span>Live Classes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Recorded" class=" text-white nav-link px-3">
+                            <span class="me-2"><i class="bi bi-file-play-fill"></i></span>
+                            <span>Study Materials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class=" text-white nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Communication Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class=" text-white nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Mock Tests</span>
+                        </a>
+                    </li>
+
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3 mb-3">
+                            Addons
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../Report/index.html" class=" text-white nav-link px-3">
+                            <span class="me-2"><i class="bi bi-flag-fill"></i></span>
+                            <span>Help and Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 py-3 ">
+                    <h4 class="px-3">Hello Student Name.....</h4>
+                    <p class="text-secondary px-3" style="font-size: small;"><em>Work hard till you get succeed</em>
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card border-top shadow-lg rounded my-4 py-2 px-3">
+                    <b>Announcements</b>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://assets-global.website-files.com/61bc763d72a0c6a0551afca9/61fae3448eb989184f828084_5f57c46384cca65e79589acf_students1.jpeg"
+                        alt="Card image cap"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Scholarship</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                        alt="Card image cap"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Laptop Scheme</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Loan Sention</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://assets-global.website-files.com/61bc763d72a0c6a0551afca9/61fae3448eb989184f828084_5f57c46384cca65e79589acf_students1.jpeg"
+                        alt="Card image cap"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Scholarship</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                        alt="Card image cap"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Laptop Scheme</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 mx-auto rounded"
+                    style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <img class="card-img-top"
+                        src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                        style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                    <div class="card-body border" style="position: relative; top: -20px;">
+                        <h5 class="card-title border-bottom">Loan Sention</h5>
+                        <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Cum voluptate
+                            voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="card border-top shadow-lg rounded my-4 py-2 px-3">Roadmap</div>
+            <img src="./Roadmap.png" alt="roadmap"
+                style="max-width: 80%;max-height: fit-content; display: grid; place-items: center;">
+        </div>
+        <section id="Livelecutre">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 mb-3">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <span class="me-2"><i></i></span>
+                                Live Lecture Links
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <input type="radio" class="btn-check" name="options" id="option2"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option2">Monday</label>
+
+                                    <input type="radio" class="btn-check" name="options" id="option3"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option3">TuesDay</label>
+
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">Wednesday</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">Thursday</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">Friday</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">Saturday</label>
+                                </div>
+                                <br>
+                                <div class="border rounded ">
+                                    <h6 class="mx-3 my-1"><b>Meet Link: <span
+                                                class="text-primary">https://meet.google.com/aoc-uavj-kxw</span> </b>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Recorded">
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 mb-3">
+                        <div class="card">
+                            <div class="card-header border rounded ">
+                                Recorded Videos
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <input type="radio" class="btn-check" name="options" id="option2"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option2">January </label>
+
+                                    <input type="radio" class="btn-check" name="options" id="option3"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option3">February</label>
+
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">March</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">April</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-secondary" for="option4">May</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">June</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">July</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">August</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">September</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">October</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">Nov</label>
+                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"
+                                        checked>
+                                    <label class="btn btn-secondary" for="option1">December</label>
+                                </div>
+                                <div class="container-fluid border rounded my-3">
+                                    <div class="row">
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Networking</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/Cug52cpjM_g?si=1G1i8hOKkiwajk2S"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Networking</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/Cug52cpjM_g?si=1G1i8hOKkiwajk2S"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Operating System</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/_wcjpxd89co?si=c2i-QzoyqwsQQYlU"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Communication</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/HAnw168huqA?si=YhcF0ksoe1lqrq6Y"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <hr>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Dita</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/-Y4qslKhmOY?si=Hr0Vyq2YgQEa_ZAC"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Mathematics</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/QQyZbueryFg?si=UZaUBb9vTc4Sx6PN"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Networking</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/Cug52cpjM_g?si=1G1i8hOKkiwajk2S"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-3 p-2">
+                                            <span class="mb-5" style="font-size: small;"><b>Recorded Lecture:</b> <span
+                                                    class="text-primary"><b>Networking</b> </span> </span>
+
+                                            <iframe width="200" height="150"
+                                                src="https://www.youtube.com/embed/Cug52cpjM_g?si=1G1i8hOKkiwajk2S"
+                                                frameborder="0" allowfullscreen></iframe>
+
+                                            <p style="font-size: smaller; text-align: left; max-width: 200px;">
+                                                <b>Description:</b> This recorded lecture covers important topics.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <span><i class="bi bi-table me-2"></i></span> Teacher available
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="table table-striped data-table" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Batch</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Suhin Shah</td>
+                                        <td>Secondary</td>
+
+                                        <td>20</td>
+                                        <td>2011/04/25</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Pritam Raha</td>
+                                        <td>Secondary</td>
+
+                                        <td>17</td>
+                                        <td>2011/07/25</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Avik Mondal</td>
+                                        <td>Secondary</td>
+
+                                        <td>20</td>
+                                        <td>2009/01/12</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Riya Hati</td>
+                                        <td>Higher-Secondary</td>
+
+                                        <td>18</td>
+                                        <td>2012/03/29</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Sumit Mondal</td>
+                                        <td>Secondary</td>
+
+                                        <td>20</td>
+                                        <td>2008/11/28</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Sk Soyeb</td>
+                                        <td>Higher-Secondary</td>
+
+                                        <td>20</td>
+                                        <td>2012/12/02</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <section class="footer">
+
+        <div class=" py-3" style="background-color: black;">
+
+        </div>
+
+        <div class="py-2" style="text-align: center; color: #ffffff; background-color: black;">
+            <h6>@Sishu SIkhya Foundation all rights reserved.</h6>
+        </div>
+
+    </section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script>
+        // JavaScript to handle the button click and navigation
+        document.getElementById('jobs-button').addEventListener('click', function () {
+            window.location.href = '../jobs/index.html';
+        });
+    </script> -->
+</body>
+
+</html>

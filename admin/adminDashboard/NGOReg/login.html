@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-link">
+            <div class="logo">
+
+                <span class="text">Edu-Hub</span>
+            </div>
+            <p class="side-big-heading">Create your account</p>
+            <p class="primary-bg-text">To keep track on your dashboard please login with your personal info</p>
+            <a href="index.html" class="loginbtn">Register now</a>
+        </div>
+        <form action="" class="signup-form-container" id="login-form">
+            <p class="big-heading">Registeration For NGO</p>
+
+            <div class="social-media-platform">
+                <box-icon type='logo' name='facebook-circle'></box-icon>
+                <box-icon name='instagram-alt' type='logo'></box-icon>
+                <box-icon type='logo' name='linkedin-square'></box-icon>
+
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <div class="login-form-contents ">
+                            <div class="text-fields Name">
+                                <label for="Name"><i></i></label>
+                                <input type="Name" name="Name" id="Name" placeholder="Enter your Name ">
+                            </div>
+                            <br>
+                            <div class="text-fields Password">
+                                <label for="Password"><i class='bx bx-lock-alt'></i></label>
+                                <input type="Password" name="Password" id="Password" placeholder="Enter Password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="login-form-contents">
+                            <div class="text-fields Email">
+                                <label for="Email"><i class='bx bx-envelope'></i></label>
+                                <input type="Email" name="Email" id="Email" placeholder="Enter your Email id">
+                            </div>
+                            <br>
+                            <div class="text-fields Cpassword">
+                                <label for="Cpassword"><i class='bx bx-lock-alt'></i></label>
+                                <input type="Cpassword" name="Cpassword" id="Cpassword" placeholder="Re-Enter Password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="tc-container">
+                            <label for="tc" class="tc">
+                                <input type="checkbox" name="tc" id="tc" required>
+                                By submiting your details, you agree to the <a href="#"> terms and conditions. </a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <input type="submit" value="Register" class="nextPage" id="login-button">
+        </form>
+</body>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        window.location.href = '../studentDashboard/index.html';
+    });
+
+</script>
+
+</html>
