@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>NGO</title>
+</head>
+
+<body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top"
+        style="background: linear-gradient(-20deg, #292828, #be5869);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">NGO DashBoard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <form class="d-flex ms-auto my-3 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav " tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li class="">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3 mb-3">
+                            Main
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3 my-2 active">
+                            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                            <span>Dashboard</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-3  active">
+                            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                            <span>How to use</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3 mb-3">
+                            Overview
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class=" text-white  nav-link px-3 ">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Teacher Assign</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#progress" class=" text-white nav-link px-3 ">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Progress Report</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#announcements" class=" text-white nav-link px-3 ">
+                            <span class="me-2 "><i class="bi bi-book-fill"></i></span>
+                            <span>Announcements</span>
+                            <span class="ms-auto ">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-dark small fw-bold text-uppercase px-3 mb-3">
+                            Addons
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class=" text-white nav-link px-3 ">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Help and Support</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class=" text-white nav-link px-3 ">
+                            <span class="me-2"><i class="bi bi-graph-up"></i></span>
+                            <span>Charts</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white nav-link px-3 ">
+                            <span class="me-2"><i class="bi bi-table"></i></span>
+                            <span>Tables</span>
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 py-3 ">
+                    <h4 class="px-3">Greeting.....</h4>
+
+                </div>
+            </div>
+            <!-- <div class="container-fluid">
+                <div class="card border-top shadow-lg rounded my-4 py-2 px-3">
+                    <b>Announcements</b>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-6  mx-auto my-2">
+                    <div class="card bg-white text-white h-100 rounded"
+                        style="box-shadow: 1px 1px 10px 1px rgb(48, 47, 47);background:linear-gradient(-20deg, #dddcdc, #cf566a);">
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="card-heading py-3 text-dark px-3"><b>Teachers available</b></div>
+                                <div class="card-footer d-flex text-black">
+                                    <span style="color: rgb(22, 128, 160);font-size: larger; font-weight: 1000;">
+                                        6</span>
+                                    <span class="ms-auto">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-heading py-3 text-dark px-3"><b>Students available</b></div>
+                                <div class="card-footer d-flex">
+                                    <span
+                                        style="color: rgb(22, 128, 160);font-size: larger; font-weight: 1000;">30</span>
+                                    <span class="ms-auto">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3 ms-auto">
+                    <div class="card  text-dark rounded my-2 h-100"
+                        style="box-shadow: 1px 1px 10px 1px rgb(48, 47, 47);background-color: rgb(48, 147, 147);">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card-body py-5 text-white"><b>How To use This Platform??</b> </div>
+
+                                <div class="card-body d-flex text-white" style="text-decoration: none;">
+                                    Here is a Tutorial -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6  rounded ">
+                                <iframe class="mt-4" width="230" height="160"
+                                    src="https://www.youtube.com/embed/D-oGs3ifMAE?si=18-L5TBDc0TzRGVd" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-3 mb-3">
+                    <div class="card bg-danger text-white h-100">
+                        <div class="card-body py-5">Danger Card</div>
+                        <div class="card-footer d-flex">
+                            View Details
+                            <span class="ms-auto">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="container-fluid">
+                <div class="col-lg-12 border rounded my-3"
+                    style="box-shadow: 1px 1px 10px 1px rgb(48, 47, 47);background-color: rgb(203, 175, 52);">
+                    <h6 class="my-4 pt-3 text-center text-white"><b>Teacher Recruit</b> </h6>
+
+                    <button class="text-center border mb-2"
+                        style="position: relative; left: 480px;color: #0b0b0b; background-color: #eaee76ce;font-size: small;box-shadow: 1px 1px 10px 1px rgb(48, 47, 47);">Click
+                        here to Show Available Teachers</button>
+                </div>
+            </div>
+            <section id="progress">
+
+
+                <div class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="card border-top shadow-lg rounded my-4 py-2 px-3 text-center">
+                            <b>Progress Report</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 my-2">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                                Student Progress
+                            </div>
+                            <div class="card-body">
+                                <canvas class="chart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 my-2">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                                Test Results
+                            </div>
+                            <div class="card-body">
+                                <canvas class="chart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="announcements">
+                <div class="container-fluid">
+                    <div class="card border-top shadow-lg rounded my-4 py-2 px-3">
+                        <b>Announcements</b>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://assets-global.website-files.com/61bc763d72a0c6a0551afca9/61fae3448eb989184f828084_5f57c46384cca65e79589acf_students1.jpeg"
+                            alt="Card image cap"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Scholarship</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                            alt="Card image cap"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Laptop Scheme</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Loan Sention</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://assets-global.website-files.com/61bc763d72a0c6a0551afca9/61fae3448eb989184f828084_5f57c46384cca65e79589acf_students1.jpeg"
+                            alt="Card image cap"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Scholarship</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                            alt="Card image cap"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Laptop Scheme</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3 mx-auto rounded"
+                        style="box-shadow: 2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <img class="card-img-top"
+                            src="https://www.brookings.edu/wp-content/uploads/2021/08/CUE_ed-tech_ADB-blog.jpg"
+                            style="width: 100%;max-height: 23vh; position: relative; top: -20px; box-shadow:2px 2px 5px 3px rgba(121, 116, 116, 0.435);">
+                        <div class="card-body border" style="position: relative; top: -20px;">
+                            <h5 class="card-title border-bottom">Loan Sention</h5>
+                            <p class="card-text " style="font-size: small;">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum voluptate
+                                voluptatem voluptates reiciendis atque dignissimos enim eum debitis facilis modi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Students available
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="example" class="table table-striped data-table" style="width: 100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Batch</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Suhin Shah</td>
+                                            <td>Secondary</td>
+
+                                            <td>20</td>
+                                            <td>2011/04/25</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Pritam Raha</td>
+                                            <td>Secondary</td>
+
+                                            <td>17</td>
+                                            <td>2011/07/25</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Avik Mondal</td>
+                                            <td>Secondary</td>
+
+                                            <td>20</td>
+                                            <td>2009/01/12</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Riya Hati</td>
+                                            <td>Higher-Secondary</td>
+
+                                            <td>18</td>
+                                            <td>2012/03/29</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Sumit Mondal</td>
+                                            <td>Secondary</td>
+
+                                            <td>20</td>
+                                            <td>2008/11/28</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Sk Soyeb</td>
+                                            <td>Higher-Secondary</td>
+
+                                            <td>20</td>
+                                            <td>2012/12/02</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Teachers available
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="example" class="table table-striped data-table" style="width: 100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Subject</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Bhupendra Sngh</td>
+                                            <td>Tally</td>
+
+                                            <td>49</td>
+                                            <td>2011/04/25</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Animesh Debnath</td>
+                                            <td>Dita</td>
+
+                                            <td>29</td>
+                                            <td>2011/07/25</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Rupendrakishor Mondal</td>
+                                            <td>Current Affires</td>
+
+                                            <td>32</td>
+                                            <td>2009/01/12</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Debashish Guha</td>
+                                            <td>Maths</td>
+
+                                            <td>42</td>
+                                            <td>2012/03/29</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Subharanshu Chandra</td>
+                                            <td>Networking</td>
+
+                                            <td>30</td>
+                                            <td>2008/11/28</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Pradipta Pal</td>
+                                            <td>Operating System</td>
+                                            <td>36</td>
+                                            <td>2012/12/02</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <section class="footer">
+
+        <div class=" py-3" style="background-color: black;">
+
+        </div>
+
+        <div class="py-2" style="text-align: center; color: #ffffff; background-color: black;">
+            <h6>@Sishu SIkhya Foundation all rights reserved.</h6>
+        </div>
+
+    </section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
